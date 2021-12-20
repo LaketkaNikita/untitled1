@@ -3,9 +3,10 @@ import java.util.LinkedList;
 
 public class xD {
     private static int D = 100000;
+    LinkedList<String> linked = new LinkedList<>();
+    ArrayList<String> array = new ArrayList<>();
 
-    static LinkedList<String> linked = new LinkedList<>();
-    static ArrayList<String> array = new ArrayList<>();
+
 
     public static void main(String[] args) {
         xD xd = new xD();
@@ -17,7 +18,7 @@ public class xD {
         System.out.println(xd.ArrayListAtTheEnd() + " " + "ARRAY лист в конце");//AL at the end
     }
     //LL at the beginning
-    public static long LinkedListAtTheBeginning() {
+    public  long LinkedListAtTheBeginning() {
         linked = new LinkedList<>();
 
         for (int i = 0; i < D; i++) {
@@ -28,8 +29,7 @@ public class xD {
         for (int i = 0; i < D; i++) {
             linked.add(0, "Da");
         }
-        long LL = System.nanoTime() - startTime;
-        return LL;
+        return System.nanoTime() - startTime;
     }
 
     //AL at the beginning
@@ -43,8 +43,7 @@ public class xD {
         for (int i = 0; i < D; i++) {
             array.add(0, "Da");
         }
-        long AL = System.nanoTime() - startTime;
-        return AL;
+        return System.nanoTime() - startTime;
     }
 
     //middle LL
@@ -57,9 +56,7 @@ public class xD {
         for (int i = 0; i < D; i++) {
             linked.add(50000, "Da");
         }
-        long LL = System.nanoTime() - startTime;
-
-        return LL;
+        return System.nanoTime() - startTime;
     }
 
     //middle AL
@@ -72,9 +69,7 @@ public class xD {
         for (int i = 0; i < D; i++) {
             array.add(50000, "Da");
         }
-        long AL = System.nanoTime() - startTime;
-
-        return AL;
+        return System.nanoTime() - startTime;
     }
 
     //end LL
@@ -87,9 +82,7 @@ public class xD {
         for (int i = 0; i < D; i++) {
             linked.add("Da");
         }
-        long LL = System.nanoTime() - startTime;
-
-        return LL;
+        return System.nanoTime() - startTime;
     }
 
     //end AL
@@ -102,9 +95,7 @@ public class xD {
         for (int i = 0; i < D; i++) {
             array.add("Da");
         }
-        long AL = System.nanoTime() - startTime;
-
-        return AL;
+        return System.nanoTime() - startTime;
     }
 
 }
