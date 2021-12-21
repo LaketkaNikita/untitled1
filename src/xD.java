@@ -4,7 +4,8 @@ import java.util.LinkedList;
 public class xD{
 
 
-    final static int D = 50;
+    final static int D = 100000;
+    final static int V = 5000;
     public LinkedList<String> link(){
         LinkedList<String> link = new LinkedList<>();
         for (int i = 0; i < D; i++) {
@@ -35,20 +36,16 @@ public class xD{
     //LL at the beginning
     public  long LinkedListAtTheBeginning() {
 
-
         long startTime = System.nanoTime();
-        for (int i = 0; i < D; i++) {
+        for (int i = 0; i < V; i++) {
             link().add(0, "Da");
         }
-
-
-
         return System.nanoTime() - startTime;
-       }
+    }
 
     public long ArrayAtTheBeginning() {
     long startTime = System.nanoTime();
-        for (int i = 0; i < D; i++) {
+        for (int i = 0; i < V; i++) {
         array().add(0, "Da");
     }
         return System.nanoTime() - startTime;
@@ -59,7 +56,7 @@ public class xD{
     //middle LL
     public long LinkedListAtTheMiddle() {
         long startTime = System.nanoTime();
-        for (int i = 0; i < D; i++) {
+        for (int i = 0; i < V; i++) {
             link().add(D/2, "Da");
         }
         return System.nanoTime() - startTime;
@@ -78,7 +75,7 @@ public class xD{
     //end LL
     public long LinkedListAtTheEnd() {
         long startTime = System.nanoTime();
-        for (int i = 0; i < D; i++) {
+        for (int i = 0; i < V; i++) {
             link().add("Da");
         }
         return System.nanoTime() - startTime;
@@ -88,7 +85,7 @@ public class xD{
     public long ArrayListAtTheEnd() {
 
         long startTime = System.nanoTime();
-        for (int i = 0; i < D; i++) {
+        for (int i = 0; i < V; i++) {
             array().add("Da");
         }
         return System.nanoTime() - startTime;
